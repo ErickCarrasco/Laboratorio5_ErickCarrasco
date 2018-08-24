@@ -83,6 +83,45 @@ public class Log_in extends javax.swing.JFrame {
         popup_menu_dulceria = new javax.swing.JPopupMenu();
         jmi_modificar_dulceria = new javax.swing.JMenuItem();
         jmi_eliminar_dulceria = new javax.swing.JMenuItem();
+        jd_boleteria = new javax.swing.JDialog();
+        jLabel16 = new javax.swing.JLabel();
+        jb_agregar_pelicula = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jt_peliculas = new javax.swing.JTree();
+        jb_logout_boleteria = new javax.swing.JButton();
+        jd_agregar_pelicula = new javax.swing.JDialog();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jb_guardar_pelicula = new javax.swing.JButton();
+        tf_nombre_pelicula = new javax.swing.JTextField();
+        js_duracion_pelicula = new javax.swing.JSpinner();
+        cb_clasificacion_pelicula = new javax.swing.JComboBox();
+        cb_categoria_pelicula = new javax.swing.JComboBox();
+        popup_menu_peliculas = new javax.swing.JPopupMenu();
+        jmi_modificar_pelicula = new javax.swing.JMenuItem();
+        jmi_eliminar_pelicula = new javax.swing.JMenuItem();
+        jd_aseo = new javax.swing.JDialog();
+        jLabel22 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jb_agregar_aseo_b = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jt_aseo = new javax.swing.JTree();
+        jd_agregar_aseo = new javax.swing.JDialog();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        tf_nombre_aseo = new javax.swing.JTextField();
+        jLabel25 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        ta_descripcion = new javax.swing.JTextArea();
+        jLabel27 = new javax.swing.JLabel();
+        cb_funcion_aseo = new javax.swing.JComboBox();
+        jb_agregar_aseo = new javax.swing.JButton();
+        popup_menu_aseo = new javax.swing.JPopupMenu();
+        jmi_modificar_aseo = new javax.swing.JMenuItem();
+        jmi_eliminar_aseo = new javax.swing.JMenuItem();
         jLabel1 = new javax.swing.JLabel();
         jb_iniciar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -398,6 +437,299 @@ public class Log_in extends javax.swing.JFrame {
         });
         popup_menu_dulceria.add(jmi_eliminar_dulceria);
 
+        jLabel16.setFont(new java.awt.Font("Eurostile Extended", 0, 24)); // NOI18N
+        jLabel16.setText("Boleteria");
+
+        jb_agregar_pelicula.setText("Agregar Pelicula");
+        jb_agregar_pelicula.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_agregar_peliculaMouseClicked(evt);
+            }
+        });
+
+        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Peliculas");
+        jt_peliculas.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jt_peliculas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_peliculasMouseClicked(evt);
+            }
+        });
+        jScrollPane3.setViewportView(jt_peliculas);
+
+        jb_logout_boleteria.setText("Log out");
+        jb_logout_boleteria.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_logout_boleteriaMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_boleteriaLayout = new javax.swing.GroupLayout(jd_boleteria.getContentPane());
+        jd_boleteria.getContentPane().setLayout(jd_boleteriaLayout);
+        jd_boleteriaLayout.setHorizontalGroup(
+            jd_boleteriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_boleteriaLayout.createSequentialGroup()
+                .addGroup(jd_boleteriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_boleteriaLayout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addComponent(jLabel16))
+                    .addGroup(jd_boleteriaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jb_agregar_pelicula))
+                    .addGroup(jd_boleteriaLayout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jd_boleteriaLayout.createSequentialGroup()
+                        .addGap(200, 200, 200)
+                        .addComponent(jb_logout_boleteria)))
+                .addContainerGap(96, Short.MAX_VALUE))
+        );
+        jd_boleteriaLayout.setVerticalGroup(
+            jd_boleteriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_boleteriaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jb_agregar_pelicula)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jb_logout_boleteria)
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+
+        jLabel17.setFont(new java.awt.Font("Eurostile Extended", 1, 24)); // NOI18N
+        jLabel17.setText("Pelicula");
+
+        jLabel18.setText("Nombre");
+
+        jLabel19.setText("Duracion (mins)");
+
+        jLabel20.setText("Clasificacion");
+
+        jLabel21.setText("Categoria");
+
+        jb_guardar_pelicula.setText("Guardar");
+        jb_guardar_pelicula.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_guardar_peliculaMouseClicked(evt);
+            }
+        });
+
+        cb_clasificacion_pelicula.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "PG", "PG-13", "Pegi 16", "Pegi 18" }));
+
+        cb_categoria_pelicula.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "terror", "Comedia", "Romance", "Drama", "Accion", "Family" }));
+
+        javax.swing.GroupLayout jd_agregar_peliculaLayout = new javax.swing.GroupLayout(jd_agregar_pelicula.getContentPane());
+        jd_agregar_pelicula.getContentPane().setLayout(jd_agregar_peliculaLayout);
+        jd_agregar_peliculaLayout.setHorizontalGroup(
+            jd_agregar_peliculaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_agregar_peliculaLayout.createSequentialGroup()
+                .addGroup(jd_agregar_peliculaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_agregar_peliculaLayout.createSequentialGroup()
+                        .addGap(134, 134, 134)
+                        .addComponent(jLabel17))
+                    .addGroup(jd_agregar_peliculaLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addGroup(jd_agregar_peliculaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel19)
+                            .addComponent(jLabel20)
+                            .addComponent(jLabel21))
+                        .addGap(32, 32, 32)
+                        .addGroup(jd_agregar_peliculaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_nombre_pelicula)
+                            .addComponent(js_duracion_pelicula, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cb_clasificacion_pelicula, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cb_categoria_pelicula, 0, 170, Short.MAX_VALUE)))
+                    .addGroup(jd_agregar_peliculaLayout.createSequentialGroup()
+                        .addGap(158, 158, 158)
+                        .addComponent(jb_guardar_pelicula)))
+                .addContainerGap(90, Short.MAX_VALUE))
+        );
+        jd_agregar_peliculaLayout.setVerticalGroup(
+            jd_agregar_peliculaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_agregar_peliculaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel17)
+                .addGap(25, 25, 25)
+                .addGroup(jd_agregar_peliculaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(tf_nombre_pelicula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(56, 56, 56)
+                .addGroup(jd_agregar_peliculaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(js_duracion_pelicula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(jd_agregar_peliculaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(cb_clasificacion_pelicula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addGroup(jd_agregar_peliculaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(cb_categoria_pelicula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addComponent(jb_guardar_pelicula)
+                .addGap(36, 36, 36))
+        );
+
+        jmi_modificar_pelicula.setText("Modificar Pelicula");
+        jmi_modificar_pelicula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_modificar_peliculaActionPerformed(evt);
+            }
+        });
+        popup_menu_peliculas.add(jmi_modificar_pelicula);
+
+        jmi_eliminar_pelicula.setText("Eliminar Pelicula");
+        jmi_eliminar_pelicula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_eliminar_peliculaActionPerformed(evt);
+            }
+        });
+        popup_menu_peliculas.add(jmi_eliminar_pelicula);
+
+        jLabel22.setFont(new java.awt.Font("Eurostile Extended", 1, 36)); // NOI18N
+        jLabel22.setText("Aseo");
+
+        jButton2.setText("Log out");
+
+        jb_agregar_aseo_b.setText("Agregar Instrumento de Limpieza");
+        jb_agregar_aseo_b.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_agregar_aseo_bMouseClicked(evt);
+            }
+        });
+
+        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Aseo");
+        jt_aseo.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jt_aseo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_aseoMouseClicked(evt);
+            }
+        });
+        jScrollPane4.setViewportView(jt_aseo);
+
+        javax.swing.GroupLayout jd_aseoLayout = new javax.swing.GroupLayout(jd_aseo.getContentPane());
+        jd_aseo.getContentPane().setLayout(jd_aseoLayout);
+        jd_aseoLayout.setHorizontalGroup(
+            jd_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_aseoLayout.createSequentialGroup()
+                .addGroup(jd_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_aseoLayout.createSequentialGroup()
+                        .addGap(134, 134, 134)
+                        .addGroup(jd_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel22)
+                            .addGroup(jd_aseoLayout.createSequentialGroup()
+                                .addGap(36, 36, 36)
+                                .addComponent(jButton2))))
+                    .addGroup(jd_aseoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jb_agregar_aseo_b))
+                    .addGroup(jd_aseoLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(79, Short.MAX_VALUE))
+        );
+        jd_aseoLayout.setVerticalGroup(
+            jd_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_aseoLayout.createSequentialGroup()
+                .addComponent(jLabel22)
+                .addGap(13, 13, 13)
+                .addComponent(jb_agregar_aseo_b)
+                .addGap(28, 28, 28)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addContainerGap())
+        );
+
+        jLabel23.setFont(new java.awt.Font("Eurostile Extended", 1, 14)); // NOI18N
+        jLabel23.setText("Agregar instrumento de aseo");
+
+        jLabel24.setText("Nombre");
+
+        jLabel25.setText("Descripcion");
+
+        ta_descripcion.setColumns(20);
+        ta_descripcion.setRows(5);
+        jScrollPane5.setViewportView(ta_descripcion);
+
+        jLabel27.setText("Funcion");
+
+        cb_funcion_aseo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Limpieza de pisos", "Limpieza de vidrios", "Limpieza de mesas" }));
+
+        jb_agregar_aseo.setText("Agregar");
+        jb_agregar_aseo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_agregar_aseoMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_agregar_aseoLayout = new javax.swing.GroupLayout(jd_agregar_aseo.getContentPane());
+        jd_agregar_aseo.getContentPane().setLayout(jd_agregar_aseoLayout);
+        jd_agregar_aseoLayout.setHorizontalGroup(
+            jd_agregar_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_agregar_aseoLayout.createSequentialGroup()
+                .addGroup(jd_agregar_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_agregar_aseoLayout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addGroup(jd_agregar_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jd_agregar_aseoLayout.createSequentialGroup()
+                                .addComponent(jLabel24)
+                                .addGap(44, 44, 44)
+                                .addComponent(tf_nombre_aseo, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel23)
+                            .addGroup(jd_agregar_aseoLayout.createSequentialGroup()
+                                .addGroup(jd_agregar_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel25)
+                                    .addComponent(jLabel27))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jd_agregar_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jScrollPane5)
+                                    .addComponent(cb_funcion_aseo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                    .addGroup(jd_agregar_aseoLayout.createSequentialGroup()
+                        .addGap(137, 137, 137)
+                        .addComponent(jb_agregar_aseo)))
+                .addContainerGap(45, Short.MAX_VALUE))
+        );
+        jd_agregar_aseoLayout.setVerticalGroup(
+            jd_agregar_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_agregar_aseoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel23)
+                .addGap(31, 31, 31)
+                .addGroup(jd_agregar_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(tf_nombre_aseo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addGroup(jd_agregar_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel25)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(jd_agregar_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel27)
+                    .addComponent(cb_funcion_aseo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addComponent(jb_agregar_aseo)
+                .addGap(45, 45, 45))
+        );
+
+        jmi_modificar_aseo.setText("Modificar");
+        jmi_modificar_aseo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_modificar_aseoActionPerformed(evt);
+            }
+        });
+        popup_menu_aseo.add(jmi_modificar_aseo);
+
+        jmi_eliminar_aseo.setText("Eliminar");
+        jmi_eliminar_aseo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_eliminar_aseoActionPerformed(evt);
+            }
+        });
+        popup_menu_aseo.add(jmi_eliminar_aseo);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Eurostile Extended", 2, 24)); // NOI18N
@@ -611,9 +943,26 @@ public class Log_in extends javax.swing.JFrame {
             }
         }
         if (puesto.equals("Boleteria")) {
-            
+            if (pass_verify.equals(pass) && user_verify.equals(user_auth)) {
+                JOptionPane.showMessageDialog(this, "Ingreso exitosamente " + usuarios.get(count).getNombre());
+                jd_boleteria.setModal(true);
+                jd_boleteria.pack();
+                jd_boleteria.setLocationRelativeTo(this);
+                jd_boleteria.setVisible(true);
+                tf_user_login.setText("");
+                pf_password_login.setText("");
+            }
         }
         if (puesto.equals("Aseo")) {
+            if (pass_verify.equals(pass) && user_verify.equals(user_auth)) {
+                JOptionPane.showMessageDialog(this, "Ingreso exitosamente " + usuarios.get(count).getNombre());
+                jd_aseo.setModal(true);
+                jd_aseo.pack();
+                jd_aseo.setLocationRelativeTo(this);
+                jd_aseo.setVisible(true);
+                tf_user_login.setText("");
+                pf_password_login.setText("");
+            }
             
         }
         
@@ -804,16 +1153,228 @@ public class Log_in extends javax.swing.JFrame {
                 "Confirm",
                 JOptionPane.YES_NO_OPTION,
                 JOptionPane.QUESTION_MESSAGE);
-        
+      
         if (response == JOptionPane.OK_OPTION) {
             DefaultTreeModel m
                     = (DefaultTreeModel) jt_dulceria.getModel();
             m.removeNodeFromParent(
-                nodo_seleccionado
+                    nodo_seleccionado
             );
             m.reload();
         }
     }//GEN-LAST:event_jmi_eliminar_dulceriaActionPerformed
+
+    private void jb_guardar_peliculaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_guardar_peliculaMouseClicked
+        // TODO add your handling code here:
+        String nombrep = tf_nombre_pelicula.getText();
+        int duracion = (Integer) js_duracion_pelicula.getValue();
+        String categoriap = cb_categoria_pelicula.getSelectedItem().toString();
+        String clasificacion = cb_clasificacion_pelicula.getSelectedItem().toString();
+
+        peliculas.add(new Peliculas(nombrep, duracion, clasificacion, categoriap));
+
+        DefaultTreeModel modeloARBOL
+                = (DefaultTreeModel) jt_peliculas.getModel();
+        DefaultMutableTreeNode raiz
+                = (DefaultMutableTreeNode) modeloARBOL.getRoot();
+
+        int centinela = -1;
+
+        for (int i = 0; i < raiz.getChildCount(); i++) {
+            if (raiz.getChildAt(i).toString().equals(categoriap)) {
+                DefaultMutableTreeNode p
+                        = new DefaultMutableTreeNode(
+                                new Peliculas(nombrep, duracion, clasificacion, categoriap)
+                        );
+                ((DefaultMutableTreeNode) raiz.getChildAt(i)).add(p);
+                centinela = 1;
+            }
+        }
+
+        if (centinela == -1) {
+            DefaultMutableTreeNode n
+                    = new DefaultMutableTreeNode(categoriap);
+            DefaultMutableTreeNode p
+                    = new DefaultMutableTreeNode(
+                            new Peliculas(nombrep, duracion, clasificacion, categoriap)
+                    );
+            n.add(p);
+            raiz.add(n);
+
+        }
+
+        modeloARBOL.reload();
+        jd_agregar_pelicula.dispose();
+        jd_agregar_pelicula.setVisible(false);
+
+    }//GEN-LAST:event_jb_guardar_peliculaMouseClicked
+
+    private void jb_agregar_peliculaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_agregar_peliculaMouseClicked
+        // TODO add your handling code here:
+        jd_agregar_pelicula.setModal(true);
+        jd_agregar_pelicula.pack();
+        jd_agregar_pelicula.setLocationRelativeTo(jd_boleteria);
+        jd_agregar_pelicula.setVisible(true);
+    }//GEN-LAST:event_jb_agregar_peliculaMouseClicked
+
+    private void jt_peliculasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_peliculasMouseClicked
+        // TODO add your handling code here:
+        if (evt.isMetaDown()) {
+            int row = jt_peliculas.getClosestRowForLocation(evt.getX(),evt.getY());
+            
+            jt_peliculas.setSelectionRow(row);
+            Object v1
+                    = jt_peliculas.getSelectionPath().
+                            getLastPathComponent();
+            nodo_seleccionado = (DefaultMutableTreeNode) v1;
+            if (nodo_seleccionado.getUserObject() instanceof Peliculas) {
+                pelicula_seleccionada
+                        = (Peliculas)  nodo_seleccionado.
+                                getUserObject();
+                popup_menu_peliculas.show(evt.getComponent(), 
+                        evt.getX(), evt.getY());
+            }
+        
+            
+        }
+    }//GEN-LAST:event_jt_peliculasMouseClicked
+
+    private void jmi_modificar_peliculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_modificar_peliculaActionPerformed
+        // TODO add your handling code here:
+        DefaultTreeModel m 
+                = (DefaultTreeModel) jt_peliculas.getModel();
+        pelicula_seleccionada.setNombrep(JOptionPane.showInputDialog("Nombre: "));
+        
+        m.reload();
+    }//GEN-LAST:event_jmi_modificar_peliculaActionPerformed
+
+    private void jmi_eliminar_peliculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_eliminar_peliculaActionPerformed
+        // TODO add your handling code here:
+        int response = JOptionPane.showConfirmDialog(
+                this,
+                "Seguro de eliminar?",
+                "Confirm",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE);
+      
+        if (response == JOptionPane.OK_OPTION) {
+            DefaultTreeModel m
+                    = (DefaultTreeModel) jt_peliculas.getModel();
+            m.removeNodeFromParent(
+                    nodo_seleccionado
+            );
+            m.reload();
+        }
+        
+    }//GEN-LAST:event_jmi_eliminar_peliculaActionPerformed
+
+    private void jb_logout_boleteriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_logout_boleteriaMouseClicked
+        // TODO add your handling code here:
+        jd_boleteria.dispose();
+        jd_boleteria.setVisible(false);
+    }//GEN-LAST:event_jb_logout_boleteriaMouseClicked
+
+    private void jb_agregar_aseoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_agregar_aseoMouseClicked
+        // TODO add your handling code here:
+        String nombrea= tf_nombre_aseo.getText();
+        String descripcion = ta_descripcion.getText();
+        String funcion = cb_funcion_aseo.getSelectedItem().toString();
+        
+        aseos.add(new Aseo(nombrea, descripcion, funcion));
+        
+        DefaultTreeModel modeloARBOL
+                = (DefaultTreeModel) jt_aseo.getModel();
+        DefaultMutableTreeNode raiz
+                = (DefaultMutableTreeNode) modeloARBOL.getRoot();
+
+        int centinela = -1;
+
+        for (int i = 0; i < raiz.getChildCount(); i++) {
+            if (raiz.getChildAt(i).toString().equals(funcion)) {
+                DefaultMutableTreeNode p
+                        = new DefaultMutableTreeNode(
+                                new Aseo(nombrea, descripcion, funcion)
+                        );
+                ((DefaultMutableTreeNode) raiz.getChildAt(i)).add(p);
+                centinela = 1;
+            }
+        }
+
+        if (centinela == -1) {
+            DefaultMutableTreeNode n
+                    = new DefaultMutableTreeNode(funcion);
+            DefaultMutableTreeNode p
+                    = new DefaultMutableTreeNode(
+                            new Aseo(nombrea, descripcion, funcion)
+                    );
+            n.add(p);
+            raiz.add(n);
+
+        }
+        
+        modeloARBOL.reload();
+        jd_agregar_aseo.dispose();
+        jd_agregar_aseo.setVisible(false);
+        
+    }//GEN-LAST:event_jb_agregar_aseoMouseClicked
+
+    private void jb_agregar_aseo_bMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_agregar_aseo_bMouseClicked
+        // TODO add your handling code here:
+        jd_agregar_aseo.setModal(true);
+        jd_agregar_aseo.pack();
+        jd_agregar_aseo.setLocationRelativeTo(jd_aseo);
+        jd_agregar_aseo.setVisible(true);
+    }//GEN-LAST:event_jb_agregar_aseo_bMouseClicked
+
+    private void jt_aseoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_aseoMouseClicked
+        // TODO add your handling code here:
+        if (evt.isMetaDown()) {
+            int row = jt_aseo.getClosestRowForLocation(evt.getX(),evt.getY());
+            
+            jt_aseo.setSelectionRow(row);
+            Object v1
+                    = jt_aseo.getSelectionPath().
+                            getLastPathComponent();
+            nodo_seleccionado = (DefaultMutableTreeNode) v1;
+            if (nodo_seleccionado.getUserObject() instanceof Aseo) {
+                aseo_seleccionado
+                        = (Aseo)  nodo_seleccionado.
+                                getUserObject();
+                popup_menu_aseo.show(evt.getComponent(), 
+                        evt.getX(), evt.getY());
+            }
+        
+            
+        }
+    }//GEN-LAST:event_jt_aseoMouseClicked
+
+    private void jmi_modificar_aseoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_modificar_aseoActionPerformed
+        // TODO add your handling code here:
+        DefaultTreeModel m 
+                = (DefaultTreeModel) jt_aseo.getModel();
+        aseo_seleccionado.setNombre_aseo(JOptionPane.showInputDialog("Nombre: "));
+        
+        m.reload();
+    }//GEN-LAST:event_jmi_modificar_aseoActionPerformed
+
+    private void jmi_eliminar_aseoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_eliminar_aseoActionPerformed
+        // TODO add your handling code here:
+        int response = JOptionPane.showConfirmDialog(
+                this,
+                "Seguro de eliminar?",
+                "Confirm",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE);
+      
+        if (response == JOptionPane.OK_OPTION) {
+            DefaultTreeModel m
+                    = (DefaultTreeModel) jt_aseo.getModel();
+            m.removeNodeFromParent(
+                    nodo_seleccionado
+            );
+            m.reload();
+        }
+    }//GEN-LAST:event_jmi_eliminar_aseoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -852,8 +1413,12 @@ public class Log_in extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox cb_categoria_dulce;
+    private javax.swing.JComboBox cb_categoria_pelicula;
+    private javax.swing.JComboBox cb_clasificacion_pelicula;
+    private javax.swing.JComboBox cb_funcion_aseo;
     private javax.swing.JComboBox cb_puesto;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -861,7 +1426,18 @@ public class Log_in extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -875,31 +1451,55 @@ public class Log_in extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JButton jb_agregar_aseo;
+    private javax.swing.JButton jb_agregar_aseo_b;
+    private javax.swing.JButton jb_agregar_pelicula;
     private javax.swing.JButton jb_agregar_usuario;
     private javax.swing.JButton jb_guardar_dulce;
+    private javax.swing.JButton jb_guardar_pelicula;
     private javax.swing.JButton jb_guardarusuario;
     private javax.swing.JButton jb_iniciar;
     private javax.swing.JButton jb_logout;
+    private javax.swing.JButton jb_logout_boleteria;
     private javax.swing.JButton jb_salir_dulceria;
     private javax.swing.JDialog jd_admin;
+    private javax.swing.JDialog jd_agregar_aseo;
+    private javax.swing.JDialog jd_agregar_pelicula;
     private javax.swing.JDialog jd_agregar_producto;
+    private javax.swing.JDialog jd_aseo;
+    private javax.swing.JDialog jd_boleteria;
     private javax.swing.JDialog jd_create;
     private javax.swing.JDialog jd_dulceria;
     private javax.swing.JMenuItem jmi_eliminar;
+    private javax.swing.JMenuItem jmi_eliminar_aseo;
     private javax.swing.JMenuItem jmi_eliminar_dulceria;
+    private javax.swing.JMenuItem jmi_eliminar_pelicula;
     private javax.swing.JMenuItem jmi_listar;
+    private javax.swing.JMenuItem jmi_modificar_aseo;
     private javax.swing.JMenuItem jmi_modificar_dulceria;
+    private javax.swing.JMenuItem jmi_modificar_pelicula;
     private javax.swing.JMenuItem jmi_modificar_user;
+    private javax.swing.JSpinner js_duracion_pelicula;
+    private javax.swing.JTree jt_aseo;
     private javax.swing.JTree jt_dulceria;
+    private javax.swing.JTree jt_peliculas;
     private javax.swing.JTree jt_usuarios;
     private javax.swing.JPasswordField pf_password_login;
     private javax.swing.JPasswordField pf_userpass;
+    private javax.swing.JPopupMenu popup_menu_aseo;
     private javax.swing.JPopupMenu popup_menu_dulceria;
+    private javax.swing.JPopupMenu popup_menu_peliculas;
     private javax.swing.JPopupMenu popup_modificar_usuarios;
+    private javax.swing.JTextArea ta_descripcion;
     private javax.swing.JTextField tf_correo;
     private javax.swing.JTextField tf_fecha;
     private javax.swing.JTextField tf_nombre;
+    private javax.swing.JTextField tf_nombre_aseo;
     private javax.swing.JTextField tf_nombre_dulce;
+    private javax.swing.JTextField tf_nombre_pelicula;
     private javax.swing.JTextField tf_sabor_dulce;
     private javax.swing.JTextField tf_user_login;
     private javax.swing.JTextField tf_username;
@@ -909,4 +1509,9 @@ public class Log_in extends javax.swing.JFrame {
     Usuario persona_seleccionada;
     ArrayList <Dulceria> dulces = new ArrayList();
     Dulceria dulce_seleccionado;
+    ArrayList <Peliculas> peliculas = new ArrayList();
+    Peliculas pelicula_seleccionada;
+    ArrayList <Aseo> aseos = new ArrayList();
+    Aseo aseo_seleccionado;
+    
 }
