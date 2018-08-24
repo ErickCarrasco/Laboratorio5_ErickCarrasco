@@ -83,6 +83,7 @@ public class Log_in extends javax.swing.JFrame {
         popup_menu_dulceria = new javax.swing.JPopupMenu();
         jmi_modificar_dulceria = new javax.swing.JMenuItem();
         jmi_eliminar_dulceria = new javax.swing.JMenuItem();
+        jmi_listar_dulceria = new javax.swing.JMenuItem();
         jd_boleteria = new javax.swing.JDialog();
         jLabel16 = new javax.swing.JLabel();
         jb_agregar_pelicula = new javax.swing.JButton();
@@ -103,6 +104,7 @@ public class Log_in extends javax.swing.JFrame {
         popup_menu_peliculas = new javax.swing.JPopupMenu();
         jmi_modificar_pelicula = new javax.swing.JMenuItem();
         jmi_eliminar_pelicula = new javax.swing.JMenuItem();
+        jmi_listar_peliculas = new javax.swing.JMenuItem();
         jd_aseo = new javax.swing.JDialog();
         jLabel22 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
@@ -122,6 +124,7 @@ public class Log_in extends javax.swing.JFrame {
         popup_menu_aseo = new javax.swing.JPopupMenu();
         jmi_modificar_aseo = new javax.swing.JMenuItem();
         jmi_eliminar_aseo = new javax.swing.JMenuItem();
+        jmi_vistar = new javax.swing.JMenuItem();
         jLabel1 = new javax.swing.JLabel();
         jb_iniciar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -148,7 +151,7 @@ public class Log_in extends javax.swing.JFrame {
 
         jLabel10.setText("Puesto");
 
-        cb_puesto.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Dulceria", "Boleteria", "Aseo " }));
+        cb_puesto.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Dulceria", "Boleteria", "Aseo" }));
 
         jb_guardarusuario.setText("Guardar");
         jb_guardarusuario.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -437,6 +440,14 @@ public class Log_in extends javax.swing.JFrame {
         });
         popup_menu_dulceria.add(jmi_eliminar_dulceria);
 
+        jmi_listar_dulceria.setText("Listar v:");
+        jmi_listar_dulceria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_listar_dulceriaActionPerformed(evt);
+            }
+        });
+        popup_menu_dulceria.add(jmi_listar_dulceria);
+
         jLabel16.setFont(new java.awt.Font("Eurostile Extended", 0, 24)); // NOI18N
         jLabel16.setText("Boleteria");
 
@@ -588,10 +599,23 @@ public class Log_in extends javax.swing.JFrame {
         });
         popup_menu_peliculas.add(jmi_eliminar_pelicula);
 
+        jmi_listar_peliculas.setText("Listar");
+        jmi_listar_peliculas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_listar_peliculasActionPerformed(evt);
+            }
+        });
+        popup_menu_peliculas.add(jmi_listar_peliculas);
+
         jLabel22.setFont(new java.awt.Font("Eurostile Extended", 1, 36)); // NOI18N
         jLabel22.setText("Aseo");
 
         jButton2.setText("Log out");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
 
         jb_agregar_aseo_b.setText("Agregar Instrumento de Limpieza");
         jb_agregar_aseo_b.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -729,6 +753,14 @@ public class Log_in extends javax.swing.JFrame {
             }
         });
         popup_menu_aseo.add(jmi_eliminar_aseo);
+
+        jmi_vistar.setText("Vistar");
+        jmi_vistar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_vistarActionPerformed(evt);
+            }
+        });
+        popup_menu_aseo.add(jmi_vistar);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -940,6 +972,10 @@ public class Log_in extends javax.swing.JFrame {
                 jd_dulceria.setVisible(true);
                 tf_user_login.setText("");
                 pf_password_login.setText("");
+            }else{
+                JOptionPane.showMessageDialog(this, "Usuario incorrecto");
+            tf_user_login.setText("");
+            pf_password_login.setText("");
             }
         }
         if (puesto.equals("Boleteria")) {
@@ -951,9 +987,15 @@ public class Log_in extends javax.swing.JFrame {
                 jd_boleteria.setVisible(true);
                 tf_user_login.setText("");
                 pf_password_login.setText("");
+            } else {
+                JOptionPane.showMessageDialog(this, "Usuario incorrecto");
+                tf_user_login.setText("");
+                pf_password_login.setText("");
             }
-        }
+        }    
+        
         if (puesto.equals("Aseo")) {
+            
             if (pass_verify.equals(pass) && user_verify.equals(user_auth)) {
                 JOptionPane.showMessageDialog(this, "Ingreso exitosamente " + usuarios.get(count).getNombre());
                 jd_aseo.setModal(true);
@@ -962,8 +1004,12 @@ public class Log_in extends javax.swing.JFrame {
                 jd_aseo.setVisible(true);
                 tf_user_login.setText("");
                 pf_password_login.setText("");
+            } else {
+                JOptionPane.showMessageDialog(this, "Usuario incorrecto");
+                tf_user_login.setText("");
+                pf_password_login.setText("");
             }
-            
+
         }
         
         if (puesto.equals("ADMINISTRATOR")) {
@@ -976,8 +1022,13 @@ public class Log_in extends javax.swing.JFrame {
                 tf_user_login.setText("");
                 pf_password_login.setText("");
                 
+            }else{
+                JOptionPane.showMessageDialog(this, "Usuario incorrecto");
+            tf_user_login.setText("");
+            pf_password_login.setText("");
             }
         }
+        
     }//GEN-LAST:event_jb_iniciarMouseClicked
 
     private void jb_agregar_usuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_agregar_usuarioMouseClicked
@@ -1038,6 +1089,17 @@ public class Log_in extends javax.swing.JFrame {
 
     private void jmi_listarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_listarActionPerformed
         // TODO add your handling code here:
+        DefaultTreeModel m 
+                = (DefaultTreeModel) jt_usuarios.getModel();
+        String nombre = persona_seleccionada.getNombre();
+        String user = persona_seleccionada.getUser();
+        String puesto = persona_seleccionada.getPuesto();
+        String correo = persona_seleccionada.getCorreo();
+        JOptionPane.showMessageDialog(jd_admin, "Nombre: " + nombre + "\n"
+                + "User: " + user + "\n"
+                + "Puesto: "+ puesto + "\n"
+                + "Correo: "+ correo + "");
+        
     }//GEN-LAST:event_jmi_listarActionPerformed
 
     private void jmi_modificar_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_modificar_userActionPerformed
@@ -1376,6 +1438,52 @@ public class Log_in extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jmi_eliminar_aseoActionPerformed
 
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        jd_aseo.dispose();
+        jd_aseo.setVisible(false);
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jmi_vistarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_vistarActionPerformed
+        // TODO add your handling code here:
+        DefaultTreeModel m 
+                = (DefaultTreeModel) jt_aseo.getModel();
+        String nombre=aseo_seleccionado.getNombre_aseo();
+        String desc = aseo_seleccionado.getDescripcion();
+        String funcion = aseo_seleccionado.getFuncion();
+        JOptionPane.showMessageDialog(jd_aseo, "Nombre: " + nombre + "\n"
+                + "Descripcion: " + desc + "\n"
+                + "Funcion: "+ funcion + "");
+    }//GEN-LAST:event_jmi_vistarActionPerformed
+
+    private void jmi_listar_dulceriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_listar_dulceriaActionPerformed
+        // TODO add your handling code here:
+        DefaultTreeModel m 
+                = (DefaultTreeModel) jt_dulceria.getModel();
+        String nombre = dulce_seleccionado.getNombre();
+        String sabor = dulce_seleccionado.getSabor();
+        String category = dulce_seleccionado.getCategoria();
+        
+        JOptionPane.showMessageDialog(jd_dulceria, "Nombre: " + nombre + "\n"
+                + "Sabor: " + sabor + "\n"
+                + "Categoria: "+ category + "");
+        
+    }//GEN-LAST:event_jmi_listar_dulceriaActionPerformed
+
+    private void jmi_listar_peliculasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_listar_peliculasActionPerformed
+        // TODO add your handling code here:
+        DefaultTreeModel m 
+                = (DefaultTreeModel) jt_peliculas.getModel();
+        String nombre = pelicula_seleccionada.getNombrep();
+        int duracion = pelicula_seleccionada.getDuracion();
+        String category = pelicula_seleccionada.getCategoria();
+        String clas = pelicula_seleccionada.getClasificacion();
+        JOptionPane.showMessageDialog(jd_boleteria, "Nombre: " + nombre + "\n"
+                + "Duracion: " + duracion + "\n"
+                + "Categoria: "+ category + "\n"
+                + "Clasificacion: "+clas);
+    }//GEN-LAST:event_jmi_listar_peliculasActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1478,10 +1586,13 @@ public class Log_in extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmi_eliminar_dulceria;
     private javax.swing.JMenuItem jmi_eliminar_pelicula;
     private javax.swing.JMenuItem jmi_listar;
+    private javax.swing.JMenuItem jmi_listar_dulceria;
+    private javax.swing.JMenuItem jmi_listar_peliculas;
     private javax.swing.JMenuItem jmi_modificar_aseo;
     private javax.swing.JMenuItem jmi_modificar_dulceria;
     private javax.swing.JMenuItem jmi_modificar_pelicula;
     private javax.swing.JMenuItem jmi_modificar_user;
+    private javax.swing.JMenuItem jmi_vistar;
     private javax.swing.JSpinner js_duracion_pelicula;
     private javax.swing.JTree jt_aseo;
     private javax.swing.JTree jt_dulceria;
