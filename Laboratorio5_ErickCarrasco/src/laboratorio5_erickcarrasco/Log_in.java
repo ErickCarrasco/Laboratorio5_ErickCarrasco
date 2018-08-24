@@ -62,6 +62,27 @@ public class Log_in extends javax.swing.JFrame {
         jt_usuarios = new javax.swing.JTree();
         jb_agregar_usuario = new javax.swing.JButton();
         jb_logout = new javax.swing.JButton();
+        popup_modificar_usuarios = new javax.swing.JPopupMenu();
+        jmi_modificar_user = new javax.swing.JMenuItem();
+        jmi_eliminar = new javax.swing.JMenuItem();
+        jmi_listar = new javax.swing.JMenuItem();
+        jd_dulceria = new javax.swing.JDialog();
+        jLabel12 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jt_dulceria = new javax.swing.JTree();
+        jb_salir_dulceria = new javax.swing.JButton();
+        jd_agregar_producto = new javax.swing.JDialog();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        cb_categoria_dulce = new javax.swing.JComboBox();
+        tf_sabor_dulce = new javax.swing.JTextField();
+        tf_nombre_dulce = new javax.swing.JTextField();
+        jb_guardar_dulce = new javax.swing.JButton();
+        popup_menu_dulceria = new javax.swing.JPopupMenu();
+        jmi_modificar_dulceria = new javax.swing.JMenuItem();
+        jmi_eliminar_dulceria = new javax.swing.JMenuItem();
         jLabel1 = new javax.swing.JLabel();
         jb_iniciar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -167,6 +188,11 @@ public class Log_in extends javax.swing.JFrame {
 
         javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Usuarios");
         jt_usuarios.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jt_usuarios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_usuariosMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jt_usuarios);
 
         jb_agregar_usuario.setText("Agregar Usuario");
@@ -177,6 +203,11 @@ public class Log_in extends javax.swing.JFrame {
         });
 
         jb_logout.setText("Log out");
+        jb_logout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_logoutMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jd_adminLayout = new javax.swing.GroupLayout(jd_admin.getContentPane());
         jd_admin.getContentPane().setLayout(jd_adminLayout);
@@ -211,6 +242,162 @@ public class Log_in extends javax.swing.JFrame {
                 .addComponent(jb_logout))
         );
 
+        jmi_modificar_user.setText("Modificar usuario");
+        jmi_modificar_user.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_modificar_userActionPerformed(evt);
+            }
+        });
+        popup_modificar_usuarios.add(jmi_modificar_user);
+
+        jmi_eliminar.setText("Eliminar usuario");
+        jmi_eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_eliminarActionPerformed(evt);
+            }
+        });
+        popup_modificar_usuarios.add(jmi_eliminar);
+
+        jmi_listar.setText("jMenuItem3");
+        jmi_listar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_listarActionPerformed(evt);
+            }
+        });
+        popup_modificar_usuarios.add(jmi_listar);
+
+        jLabel12.setFont(new java.awt.Font("Eurostile Extended", 0, 18)); // NOI18N
+        jLabel12.setText("Dulceria");
+
+        jButton1.setText("Agregar producto");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+
+        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Dulceria");
+        jt_dulceria.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jt_dulceria.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_dulceriaMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(jt_dulceria);
+
+        jb_salir_dulceria.setText("Salir");
+        jb_salir_dulceria.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_salir_dulceriaMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_dulceriaLayout = new javax.swing.GroupLayout(jd_dulceria.getContentPane());
+        jd_dulceria.getContentPane().setLayout(jd_dulceriaLayout);
+        jd_dulceriaLayout.setHorizontalGroup(
+            jd_dulceriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_dulceriaLayout.createSequentialGroup()
+                .addGroup(jd_dulceriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_dulceriaLayout.createSequentialGroup()
+                        .addGap(199, 199, 199)
+                        .addComponent(jLabel12))
+                    .addGroup(jd_dulceriaLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addGroup(jd_dulceriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 434, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jd_dulceriaLayout.createSequentialGroup()
+                        .addGap(223, 223, 223)
+                        .addComponent(jb_salir_dulceria)))
+                .addContainerGap(65, Short.MAX_VALUE))
+        );
+        jd_dulceriaLayout.setVerticalGroup(
+            jd_dulceriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_dulceriaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel12)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45)
+                .addComponent(jb_salir_dulceria)
+                .addContainerGap(44, Short.MAX_VALUE))
+        );
+
+        jLabel13.setText("nombre");
+
+        jLabel14.setText("Sabor");
+
+        jLabel15.setText("Categoria");
+
+        cb_categoria_dulce.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Chocolates", "Gomitas", "Paletas", "Chicles" }));
+
+        jb_guardar_dulce.setText("Guardar");
+        jb_guardar_dulce.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_guardar_dulceMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_agregar_productoLayout = new javax.swing.GroupLayout(jd_agregar_producto.getContentPane());
+        jd_agregar_producto.getContentPane().setLayout(jd_agregar_productoLayout);
+        jd_agregar_productoLayout.setHorizontalGroup(
+            jd_agregar_productoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_agregar_productoLayout.createSequentialGroup()
+                .addGroup(jd_agregar_productoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_agregar_productoLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addGroup(jd_agregar_productoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel13))
+                        .addGap(32, 32, 32)
+                        .addGroup(jd_agregar_productoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_sabor_dulce)
+                            .addComponent(cb_categoria_dulce, 0, 152, Short.MAX_VALUE)
+                            .addComponent(tf_nombre_dulce)))
+                    .addGroup(jd_agregar_productoLayout.createSequentialGroup()
+                        .addGap(125, 125, 125)
+                        .addComponent(jb_guardar_dulce)))
+                .addContainerGap(96, Short.MAX_VALUE))
+        );
+        jd_agregar_productoLayout.setVerticalGroup(
+            jd_agregar_productoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_agregar_productoLayout.createSequentialGroup()
+                .addGap(67, 67, 67)
+                .addGroup(jd_agregar_productoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(tf_nombre_dulce, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49)
+                .addGroup(jd_agregar_productoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(tf_sabor_dulce, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(jd_agregar_productoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(cb_categoria_dulce, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addComponent(jb_guardar_dulce)
+                .addContainerGap(55, Short.MAX_VALUE))
+        );
+
+        jmi_modificar_dulceria.setText("jMenuItem3");
+        jmi_modificar_dulceria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_modificar_dulceriaActionPerformed(evt);
+            }
+        });
+        popup_menu_dulceria.add(jmi_modificar_dulceria);
+
+        jmi_eliminar_dulceria.setText("jMenuItem3");
+        jmi_eliminar_dulceria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_eliminar_dulceriaActionPerformed(evt);
+            }
+        });
+        popup_menu_dulceria.add(jmi_eliminar_dulceria);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Eurostile Extended", 2, 24)); // NOI18N
@@ -240,6 +427,11 @@ public class Log_in extends javax.swing.JFrame {
 
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem2.setText("Exit");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem2);
 
         jMenuBar1.add(jMenu1);
@@ -408,7 +600,15 @@ public class Log_in extends javax.swing.JFrame {
         String puesto = usuarios.get(count).getPuesto();
         
         if (puesto.equals("Dulceria")) {
-            
+            if (pass_verify.equals(pass) && user_verify.equals(user_auth)) {
+                JOptionPane.showMessageDialog(this, "Ingreso exitosamente " + usuarios.get(count).getNombre());
+                jd_dulceria.setModal(true);
+                jd_dulceria.pack();
+                jd_dulceria.setLocationRelativeTo(this);
+                jd_dulceria.setVisible(true);
+                tf_user_login.setText("");
+                pf_password_login.setText("");
+            }
         }
         if (puesto.equals("Boleteria")) {
             
@@ -438,6 +638,182 @@ public class Log_in extends javax.swing.JFrame {
         jd_create.setLocationRelativeTo(jd_admin);
         jd_create.setVisible(true);
     }//GEN-LAST:event_jb_agregar_usuarioMouseClicked
+
+    private void jb_logoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_logoutMouseClicked
+        // TODO add your handling code here:
+        jd_admin.dispose();
+        jd_admin.setVisible(false);
+    }//GEN-LAST:event_jb_logoutMouseClicked
+
+    private void jt_usuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_usuariosMouseClicked
+        // TODO add your handling code here:
+        if (evt.isMetaDown()) {
+            int row = jt_usuarios.getClosestRowForLocation(evt.getX(),evt.getY());
+            
+            jt_usuarios.setSelectionRow(row);
+            Object v1
+                    = jt_usuarios.getSelectionPath().
+                            getLastPathComponent();
+            nodo_seleccionado = (DefaultMutableTreeNode) v1;
+            if (nodo_seleccionado.getUserObject() instanceof Usuario) {
+                persona_seleccionada
+                        = (Usuario)  nodo_seleccionado.
+                                getUserObject();
+                popup_modificar_usuarios.show(evt.getComponent(), 
+                        evt.getX(), evt.getY());
+            }
+        
+            
+        }
+    }//GEN-LAST:event_jt_usuariosMouseClicked
+
+    private void jmi_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_eliminarActionPerformed
+        // TODO add your handling code here:
+        int response = JOptionPane.showConfirmDialog(
+                this,
+                "Seguro de eliminar?",
+                "Confirm",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE);
+        
+        if (response == JOptionPane.OK_OPTION) {
+            DefaultTreeModel m
+                    = (DefaultTreeModel) jt_usuarios.getModel();
+            m.removeNodeFromParent(
+                nodo_seleccionado
+            );
+            m.reload();
+        }
+        
+    }//GEN-LAST:event_jmi_eliminarActionPerformed
+
+    private void jmi_listarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_listarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmi_listarActionPerformed
+
+    private void jmi_modificar_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_modificar_userActionPerformed
+        // TODO add your handling code here:
+        DefaultTreeModel m 
+                = (DefaultTreeModel) jt_usuarios.getModel();
+        persona_seleccionada.setNombre(JOptionPane.showInputDialog("Nombre: "));
+        
+        m.reload();
+    }//GEN-LAST:event_jmi_modificar_userActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jb_guardar_dulceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_guardar_dulceMouseClicked
+        // TODO add your handling code here:
+        
+        String nombre = tf_nombre_dulce.getText();
+        String sabor = tf_sabor_dulce.getText();
+        String categoria = cb_categoria_dulce.getSelectedItem().toString();
+        
+        dulces.add(new Dulceria(nombre, sabor, categoria));
+        
+        DefaultTreeModel modeloARBOL
+                = (DefaultTreeModel) jt_dulceria.getModel();
+        DefaultMutableTreeNode raiz
+                = (DefaultMutableTreeNode) modeloARBOL.getRoot();
+
+        int centinela = -1;
+
+        for (int i = 0; i < raiz.getChildCount(); i++) {
+            if (raiz.getChildAt(i).toString().equals(categoria)) {
+                DefaultMutableTreeNode p
+                        = new DefaultMutableTreeNode(
+                                new Dulceria(nombre, sabor, categoria)
+                        );
+                ((DefaultMutableTreeNode) raiz.getChildAt(i)).add(p);
+                centinela = 1;
+            }
+        }
+        
+        if (centinela == -1) {
+                DefaultMutableTreeNode n
+                        = new DefaultMutableTreeNode (categoria);
+                DefaultMutableTreeNode p
+                        = new DefaultMutableTreeNode(
+                                new Dulceria(nombre, sabor, categoria)
+                        );
+                n.add(p);
+                raiz.add(n);
+                
+            }
+            
+            modeloARBOL.reload();
+            jd_agregar_producto.dispose();
+            jd_agregar_producto.setVisible(false);
+
+        
+    }//GEN-LAST:event_jb_guardar_dulceMouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        jd_agregar_producto.setModal(true);
+        jd_agregar_producto.pack();
+        jd_agregar_producto.setLocationRelativeTo(jd_dulceria);
+        jd_agregar_producto.setVisible(true);
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jb_salir_dulceriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_salir_dulceriaMouseClicked
+        // TODO add your handling code here:
+        jd_dulceria.dispose();
+        jd_dulceria.setVisible(false);
+    }//GEN-LAST:event_jb_salir_dulceriaMouseClicked
+
+    private void jmi_modificar_dulceriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_modificar_dulceriaActionPerformed
+        // TODO add your handling code here:
+        DefaultTreeModel m 
+                = (DefaultTreeModel) jt_dulceria.getModel();
+        dulce_seleccionado.setNombre(JOptionPane.showInputDialog("Nombre: "));
+        
+        m.reload();
+    }//GEN-LAST:event_jmi_modificar_dulceriaActionPerformed
+
+    private void jt_dulceriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_dulceriaMouseClicked
+        // TODO add your handling code here:
+        if (evt.isMetaDown()) {
+            int row = jt_dulceria.getClosestRowForLocation(evt.getX(),evt.getY());
+            
+            jt_dulceria.setSelectionRow(row);
+            Object v1
+                    = jt_dulceria.getSelectionPath().
+                            getLastPathComponent();
+            nodo_seleccionado = (DefaultMutableTreeNode) v1;
+            if (nodo_seleccionado.getUserObject() instanceof Dulceria) {
+                dulce_seleccionado
+                        = (Dulceria)  nodo_seleccionado.
+                                getUserObject();
+                popup_menu_dulceria.show(evt.getComponent(), 
+                        evt.getX(), evt.getY());
+            }
+        
+            
+        }
+    }//GEN-LAST:event_jt_dulceriaMouseClicked
+
+    private void jmi_eliminar_dulceriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_eliminar_dulceriaActionPerformed
+        // TODO add your handling code here:
+        int response = JOptionPane.showConfirmDialog(
+                this,
+                "Seguro de eliminar?",
+                "Confirm",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE);
+        
+        if (response == JOptionPane.OK_OPTION) {
+            DefaultTreeModel m
+                    = (DefaultTreeModel) jt_dulceria.getModel();
+            m.removeNodeFromParent(
+                nodo_seleccionado
+            );
+            m.reload();
+        }
+    }//GEN-LAST:event_jmi_eliminar_dulceriaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -475,10 +851,16 @@ public class Log_in extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox cb_categoria_dulce;
     private javax.swing.JComboBox cb_puesto;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -492,21 +874,39 @@ public class Log_in extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton jb_agregar_usuario;
+    private javax.swing.JButton jb_guardar_dulce;
     private javax.swing.JButton jb_guardarusuario;
     private javax.swing.JButton jb_iniciar;
     private javax.swing.JButton jb_logout;
+    private javax.swing.JButton jb_salir_dulceria;
     private javax.swing.JDialog jd_admin;
+    private javax.swing.JDialog jd_agregar_producto;
     private javax.swing.JDialog jd_create;
+    private javax.swing.JDialog jd_dulceria;
+    private javax.swing.JMenuItem jmi_eliminar;
+    private javax.swing.JMenuItem jmi_eliminar_dulceria;
+    private javax.swing.JMenuItem jmi_listar;
+    private javax.swing.JMenuItem jmi_modificar_dulceria;
+    private javax.swing.JMenuItem jmi_modificar_user;
+    private javax.swing.JTree jt_dulceria;
     private javax.swing.JTree jt_usuarios;
     private javax.swing.JPasswordField pf_password_login;
     private javax.swing.JPasswordField pf_userpass;
+    private javax.swing.JPopupMenu popup_menu_dulceria;
+    private javax.swing.JPopupMenu popup_modificar_usuarios;
     private javax.swing.JTextField tf_correo;
     private javax.swing.JTextField tf_fecha;
     private javax.swing.JTextField tf_nombre;
+    private javax.swing.JTextField tf_nombre_dulce;
+    private javax.swing.JTextField tf_sabor_dulce;
     private javax.swing.JTextField tf_user_login;
     private javax.swing.JTextField tf_username;
     // End of variables declaration//GEN-END:variables
     ArrayList <Usuario> usuarios = new ArrayList();
-    
+    DefaultMutableTreeNode nodo_seleccionado;
+    Usuario persona_seleccionada;
+    ArrayList <Dulceria> dulces = new ArrayList();
+    Dulceria dulce_seleccionado;
 }

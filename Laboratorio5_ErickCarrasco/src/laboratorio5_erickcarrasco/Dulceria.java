@@ -49,7 +49,7 @@ public class Dulceria {
 
     @Override
     public String toString() {
-        return "Dulceria{" + "nombre=" + nombre + ", sabor=" + sabor + ", categoria=" + categoria + '}';
+        return "" + "nombre: " + nombre + " sabor " + sabor ;
     }
     
     

@@ -79,7 +79,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario:" + " " + user +"\n"+ "puesto: " + puesto + '}';
+        return "Usuario:" + " " + user +" "+ " puesto: " + puesto ;
     }
     
     
